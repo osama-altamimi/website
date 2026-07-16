@@ -2,6 +2,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { geistSans, geistMono } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { Footer } from "@/components/sections/footer"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(geistSans.variable, geistMono.variable)}>
-      <body>{children}</body>
+      <body>
+        <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }
