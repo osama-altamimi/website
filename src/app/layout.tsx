@@ -1,7 +1,10 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { geistSans, geistMono } from "@/lib/fonts"
+import { geistSans, geistMono, rustico } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+
+import { ThemeProvider } from "@/components/theme/theme-provider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import { Footer } from "@/components/sections/footer"
 
 export const metadata: Metadata = {
@@ -15,12 +18,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={cn(geistSans.variable, geistMono.variable)}>
+    <html
+      lang="en"
+      className={cn(geistSans.variable, geistMono.variable, rustico.variable)}
+      suppressHydrationWarning
+    >
       <body>
-        <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <TooltipProvider>
+            <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+              {children}
+            </main>
+            <Footer />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
