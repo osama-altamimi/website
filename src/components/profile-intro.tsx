@@ -1,23 +1,22 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import { ButtonAnchor } from "@/components/ui/button"
 import { ArrowDownToLineIcon } from "lucide-react"
 import { socials } from "@/lib/socials"
 import { FadeInStagger, FadeInItem } from "@/components/ui/animations/fade-in"
 
 export default function ProfileIntro() {
   const resumeButton = (
-    <Button
+    <ButtonAnchor
       variant="outline"
       size="lg"
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-full"
-      nativeButton={false}
-      render={
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <ArrowDownToLineIcon />
-          View resume
-        </a>
-      }
-    />
+    >
+      <ArrowDownToLineIcon />
+      View resume
+    </ButtonAnchor>
   )
   return (
     <FadeInStagger className="flex flex-col gap-3">
@@ -57,20 +56,15 @@ export default function ProfileIntro() {
           .filter((social) => ["github", "youtube", "x"].includes(social.id))
           .map((social) => (
             <FadeInItem key={social.id} className="flex gap-2">
-              <Button
+              <ButtonAnchor
                 variant="outline"
-                nativeButton={false}
-                render={
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <social.icon {...social.iconProps} />
-                    {social.label}
-                  </a>
-                }
-              />
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <social.icon {...social.iconProps} />
+                {social.label}
+              </ButtonAnchor>
             </FadeInItem>
           ))}
       </div>
