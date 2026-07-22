@@ -1,40 +1,59 @@
 "use client"
 
-import React from "react"
+import type { ElementType, ReactNode } from "React"
 import { motion } from "motion/react"
-import { containerVariants, variantsMap } from "@/components/ui/animations/variants"
+import {
+  containerVariants,
+  variantsMap,
+} from "@/components/ui/animations/variants"
 
-export function FadeInStagger({
-  children,
-  className,
-}: {
-  children: React.ReactNode
+type AsProp = keyof HTMLElementTagNameMap
+
+type BaseProps = {
+  children: ReactNode
   className?: string
-}) {
+  as?: AsProp
+}
+
+type FadeInItemProps = BaseProps & {
+  variant?: keyof typeof variantsMap
+}
+
+export function FadeInStagger({ children, className, as = "div" }: BaseProps) {
+  const Component = motion[as] as ElementType
+
   return (
-    <motion.div
+    <Component
       variants={containerVariants}
       initial="hidden"
       animate="show"
       className={className}
     >
       {children}
-    </motion.div>
+    </Component>
+  )
+}
+
+export function FadeInGroup({ children, className, as = "div" }: BaseProps) {
+  const Component = motion[as] as ElementType
+  return (
+    <Component variants={containerVariants} className={className}>
+      {children}
+    </Component>
   )
 }
 
 export function FadeInItem({
   children,
   className,
-  variant = "text",
-}: {
-  children: React.ReactNode
-  className?: string
-  variant?: "text" | "button" | "image"
-}) {
+  variant = "item",
+  as = "div",
+}: FadeInItemProps) {
+  const Component = motion[as] as ElementType
+
   return (
-    <motion.div variants={variantsMap[variant]} className={className}>
+    <Component variants={variantsMap[variant]} className={className}>
       {children}
-    </motion.div>
+    </Component>
   )
 }

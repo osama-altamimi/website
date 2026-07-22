@@ -2,7 +2,7 @@ import Image from "next/image"
 import { ButtonAnchor } from "@/components/ui/button"
 import { ArrowDownToLineIcon } from "lucide-react"
 import { socials } from "@/lib/socials"
-import { FadeInStagger, FadeInItem } from "@/components/ui/animations/fade-in"
+import { FadeInItem } from "@/components/ui/animations/fade-in"
 
 export default function ProfileIntro() {
   const resumeButton = (
@@ -19,34 +19,35 @@ export default function ProfileIntro() {
     </ButtonAnchor>
   )
   return (
-    <FadeInStagger className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3">
       <div className="flex sm:items-center sm:justify-between">
-        <FadeInItem className="flex items-center gap-3">
-          <div className="relative size-20 overflow-hidden rounded-xl">
+        <div className="flex items-center gap-3">
+          <FadeInItem className="relative size-20 overflow-hidden rounded-xl">
             <Image
               src="/assets/avatar.png"
-              alt="الصورة الشخصية لـ أسامة"
+              alt="Osama AL-Tamimi profile picture"
               fill
               sizes="80px"
               className="object-cover"
+              preload
             />
-          </div>
+          </FadeInItem>
 
           <FadeInItem className="flex flex-col">
             <span className="text-muted-foreground sm:text-lg">Hi, I'm</span>
-            <h1 className="font-rustico text-3xl">Osama AL-Tamimi</h1>
+            <h1 className="font-rustico text-3xl sm:text-4xl">
+              Osama AL-Tamimi
+            </h1>
           </FadeInItem>
-        </FadeInItem>
+        </div>
 
         <FadeInItem className="hidden sm:block">{resumeButton}</FadeInItem>
       </div>
 
-      <FadeInItem>
-        <p className="text-muted-foreground">
-          Full-Stack Developer from Saudi Arabia focused on building modern web
-          applications and scalable systems, passionate about software
-          engineering and infrastructure.
-        </p>
+      <FadeInItem as="p" className="text-muted-foreground">
+        Full-Stack Developer based in Saudi Arabia, building modern web
+        applications and scalable systems with a focus on software engineering
+        and infrastructure.
       </FadeInItem>
 
       <FadeInItem className="block sm:hidden">{resumeButton}</FadeInItem>
@@ -55,7 +56,7 @@ export default function ProfileIntro() {
         {socials
           .filter((social) => ["github", "youtube", "x"].includes(social.id))
           .map((social) => (
-            <FadeInItem key={social.id} className="flex gap-2">
+            <FadeInItem key={social.id}>
               <ButtonAnchor
                 variant="outline"
                 href={social.href}
@@ -68,6 +69,6 @@ export default function ProfileIntro() {
             </FadeInItem>
           ))}
       </div>
-    </FadeInStagger>
+    </div>
   )
 }
