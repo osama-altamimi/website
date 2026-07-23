@@ -4,7 +4,7 @@ import { ButtonAnchor } from "@/components/ui/button"
 
 export default function ProfileSkills() {
   return (
-    <div className="flex flex-col gap-3">
+    <section className="flex flex-col gap-3">
       <FadeInItem as="h2" className="font-rustico text-2xl sm:text-3xl">
         Technical skills
       </FadeInItem>
@@ -13,10 +13,10 @@ export default function ProfileSkills() {
         {skills.map((group) => (
           <FadeInItem
             key={group.id}
-            className="bg-card/30 flex flex-col gap-3 rounded-lg border p-4 odd:last:sm:col-span-2"
+            className="bg-card/50 flex flex-col gap-3 rounded-lg border p-4 odd:last:sm:col-span-2"
           >
             <div className="flex items-center gap-2">
-              <div className="bg-input/30 rounded-lg border p-2">
+              <div className="bg-card/50 rounded-lg border p-2">
                 <group.icon className="size-4" />
               </div>
               <h3 className="font-medium">{group.label}</h3>
@@ -24,7 +24,7 @@ export default function ProfileSkills() {
 
             <FadeInGroup className="flex flex-wrap gap-2">
               {group.items.map((item) => (
-                <FadeInItem as="h4" key={item.id}>
+                <FadeInItem key={item.id}>
                   <ButtonAnchor
                     variant="outline"
                     size="sm"
@@ -42,6 +42,6 @@ export default function ProfileSkills() {
           </FadeInItem>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
