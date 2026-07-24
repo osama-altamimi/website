@@ -50,18 +50,19 @@ export function ThemeToggle() {
         render={
           <Button
             variant="outline"
-            size="lg"
+            size="icon"
             aria-label="Toggle theme"
+            className="h-10 w-10 rounded-full border-2 bg-[#F7F7F7]! dark:bg-[#151515]!"
             onClick={() => setTheme(isDark)}
           >
             <SunIcon className="h-[1.2rem] w-[1.2rem] dark:hidden" />
             <MoonIcon className="hidden h-[1.2rem] w-[1.2rem] dark:block" />
-            <span className="dark:hidden">Light</span>
-            <span className="hidden dark:block">Dark</span>
+            {/* <span className="dark:hidden">Light</span>
+            <span className="hidden dark:block">Dark</span> */}
           </Button>
         }
       />
-      <TooltipContent>
+      <TooltipContent side="left">
         <p>Toggle theme</p>
         <Kbd>D</Kbd>
       </TooltipContent>

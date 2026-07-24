@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { FadeInStagger } from "@/components/ui/animations/fade-in"
+import { ThemeToggle } from "@/components/theme/theme-toggle"
 import { Footer } from "@/components/sections/footer"
 
 export const metadata: Metadata = {
@@ -28,7 +29,12 @@ export default function RootLayout({
         <ThemeProvider>
           <TooltipProvider>
             <FadeInStagger>
-              {children}
+              <main className="mx-auto w-full max-w-3xl space-y-14 px-4 py-16 sm:px-6 sm:py-24">
+                {children}
+              </main>
+              <div className="fixed right-4 bottom-4 z-50">
+                <ThemeToggle />
+              </div>
               <Footer />
             </FadeInStagger>
           </TooltipProvider>
