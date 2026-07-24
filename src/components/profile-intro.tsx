@@ -65,7 +65,7 @@ export default function ProfileIntro() {
                 rel="noopener noreferrer"
                 aria-label={social.label}
               >
-                <social.icon {...social.iconProps} />
+                <social.icon {...social.iconProps} aria-hidden="true" />
                 {social.label}
               </ButtonAnchor>
             </FadeInItem>

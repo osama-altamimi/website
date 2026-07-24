@@ -19,7 +19,7 @@ export function Footer() {
         <span>&copy; {year} Osama AL-Tamimi</span>
         <div className="flex items-center justify-center gap-1.5">
           <span>Made in Saudi</span>
-          <span aria-hidden>·</span>
+          <span aria-hidden="true">·</span>
           <LiveClock hour12 />
         </div>
       </motion.footer>

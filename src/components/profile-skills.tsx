@@ -21,7 +21,7 @@ export default function ProfileSkills() {
                 aria-label={item.label}
                 className="w-full gap-1.5"
               >
-                <item.icon {...item.iconProps} />
+                <item.icon {...item.iconProps} aria-hidden="true" />
                 {item.label}
               </ButtonAnchor>
             </FadeInItem>
