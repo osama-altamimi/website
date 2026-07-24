@@ -12,6 +12,7 @@ export default function ProfileIntro() {
       href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="View resume"
       className="w-full"
     >
       <ArrowDownToLineIcon />
@@ -62,6 +63,7 @@ export default function ProfileIntro() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={social.label}
               >
                 <social.icon {...social.iconProps} />
                 {social.label}

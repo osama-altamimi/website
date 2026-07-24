@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { FadeInStagger } from "@/components/ui/animations/fade-in"
 import { Footer } from "@/components/sections/footer"
 
 export const metadata: Metadata = {
@@ -26,8 +27,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <TooltipProvider>
-            {children}
-            <Footer />
+            <FadeInStagger>
+              {children}
+              <Footer />
+            </FadeInStagger>
           </TooltipProvider>
         </ThemeProvider>
       </body>

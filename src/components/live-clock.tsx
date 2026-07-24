@@ -22,7 +22,7 @@ export function LiveClock({
     const options: Intl.DateTimeFormatOptions = {
       timeZone,
       hour12,
-      hour: "2-digit",
+      hour: "numeric",
     }
 
     if (precision === "minutes" || precision === "seconds") {

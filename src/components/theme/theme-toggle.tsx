@@ -51,7 +51,6 @@ export function ThemeToggle() {
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full"
             aria-label="Toggle theme"
             onClick={() => setTheme(isDark)}
           >

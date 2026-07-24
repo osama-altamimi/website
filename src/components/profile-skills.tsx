@@ -1,4 +1,4 @@
-import { FadeInGroup, FadeInItem } from "@/components/ui/animations/fade-in"
+import { FadeInItem } from "@/components/ui/animations/fade-in"
 import { skills } from "@/lib/skills"
 import { ButtonAnchor } from "@/components/ui/button"
 
@@ -9,38 +9,24 @@ export default function ProfileSkills() {
         Technical skills
       </FadeInItem>
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        {skills.map((group) => (
-          <FadeInItem
-            key={group.id}
-            className="bg-card/50 flex flex-col gap-3 rounded-lg border p-4 odd:last:sm:col-span-2"
-          >
-            <div className="flex items-center gap-2">
-              <div className="bg-card/50 rounded-lg border p-2">
-                <group.icon className="size-4" />
-              </div>
-              <h3 className="font-medium">{group.label}</h3>
-            </div>
-
-            <FadeInGroup className="flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <FadeInItem key={item.id}>
-                  <ButtonAnchor
-                    variant="outline"
-                    size="sm"
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="gap-1.5"
-                  >
-                    <item.icon {...item.iconProps} />
-                    {item.label}
-                  </ButtonAnchor>
-                </FadeInItem>
-              ))}
-            </FadeInGroup>
-          </FadeInItem>
-        ))}
+      <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+        {skills.map((group) =>
+          group.items.map((item) => (
+            <FadeInItem key={item.id}>
+              <ButtonAnchor
+                variant="outline"
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.label}
+                className="w-full gap-1.5"
+              >
+                <item.icon {...item.iconProps} />
+                {item.label}
+              </ButtonAnchor>
+            </FadeInItem>
+          ))
+        )}
       </div>
     </section>
   )
