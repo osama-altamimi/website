@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/og.png`,
+        url: "/assets/og.png",
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
-    images: [`${SITE_URL}/og.png`],
+    images: ["/assets/og.png"],
     creator: TWITTER_USERNAME,
   },
 
