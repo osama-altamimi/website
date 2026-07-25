@@ -130,8 +130,8 @@
     cursor: pointer;
   }
   html {
-    scrollbar-gutter: stable;
-    background-color: var(--background);
+    /* scrollbar-gutter: stable;
+    background-color: var(--background); */
     @apply selection:bg-primary selection:text-primary-foreground h-full font-sans antialiased;
   }
 }

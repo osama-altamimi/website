@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator"
 import { ButtonAnchor } from "@/components/ui/button"
 import { CheckIcon, SendIcon } from "lucide-react"
 import { CopyButton } from "@/components/copy-button"
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
+import { CONTACT_EMAIL } from "@/config/site"
 
 const services = [
   { title: "Showcase websites & landing pages" },
@@ -53,20 +53,20 @@ export default function ProfileContact() {
               <FadeInItem className="flex-1">
                 <ButtonAnchor
                   size="lg"
-                  href="mailto:me@ousama.dev"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   rel="noopener noreferrer"
                   aria-label="Email me"
                   className="w-full gap-1.5"
                 >
                   <SendIcon />
-                  me@ousama.dev
+                  {CONTACT_EMAIL}
                 </ButtonAnchor>
               </FadeInItem>
               <FadeInItem>
                 <CopyButton
                   variant="outline"
                   size="icon-lg"
-                  text="me@ousama.dev"
+                  text={CONTACT_EMAIL}
                   tooltip="Copy email address"
                   aria-label="Copy email address"
                 />

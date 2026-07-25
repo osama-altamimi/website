@@ -1,5 +1,5 @@
 import { FadeInItem } from "@/components/ui/animations/fade-in"
-import { skills } from "@/lib/skills"
+import { skills } from "@/config/skills"
 import { ButtonAnchor } from "@/components/ui/button"
 
 export default function ProfileSkills() {

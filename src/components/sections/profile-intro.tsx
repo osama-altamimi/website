@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ButtonAnchor } from "@/components/ui/button"
 import { ArrowDownToLineIcon } from "lucide-react"
-import { socials } from "@/lib/socials"
+import { socials } from "@/config/socials"
 import { FadeInItem } from "@/components/ui/animations/fade-in"
 
 export default function ProfileIntro() {
