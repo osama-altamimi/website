@@ -1,6 +1,6 @@
 "use client"
 
-import type { ElementType, ReactNode } from "React"
+import type { ElementType, ReactNode } from "react"
 import { motion } from "motion/react"
 import {
   containerVariants,
