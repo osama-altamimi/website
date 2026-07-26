@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Footer } from "@/components/sections/footer"
-import { ThemeToggle } from "@/components/theme/theme-toggle"
+import { SideButtons } from "@/components/sections/side-buttons"
 
 export { metadata, viewport }
 
@@ -26,9 +26,7 @@ export default function RootLayout({
           <TooltipProvider>
             {children}
             <Footer />
-            <div className="fixed right-4 bottom-4 z-50">
-              <ThemeToggle />
-            </div>
+            <SideButtons />
           </TooltipProvider>
         </ThemeProvider>
       </body>
