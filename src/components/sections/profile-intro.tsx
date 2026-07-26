@@ -42,7 +42,7 @@ export default function ProfileIntro() {
           </FadeInItem>
         </div>
 
-        <FadeInItem className="hidden sm:block">{resumeButton}</FadeInItem>
+        {/* <FadeInItem className="hidden sm:block">{resumeButton}</FadeInItem> */}
       </div>
 
       <FadeInItem as="p" className="text-muted-foreground">
@@ -51,7 +51,7 @@ export default function ProfileIntro() {
         and infrastructure.
       </FadeInItem>
 
-      <FadeInItem className="block sm:hidden">{resumeButton}</FadeInItem>
+      {/* <FadeInItem className="block sm:hidden">{resumeButton}</FadeInItem> */}
 
       <div className="flex gap-2">
         {socials

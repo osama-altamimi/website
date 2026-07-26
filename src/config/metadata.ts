@@ -60,6 +60,11 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
+  icons: {
+    icon: "/logo/logo-modified.png",
+    apple: "/logo/logo.png",
+  },
 }
 
 export const viewport: Viewport = {
