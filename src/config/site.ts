@@ -1,4 +1,4 @@
-export const SITE_URL = "https://www.ousama.dev"
+export const SITE_URL = "https://ousama.dev"
 
 export const SITE_NAME = "Osama AL-Tamimi"
 
