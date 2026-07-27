@@ -1,0 +1,32 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-push:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Build image
+        run: docker build -t website:latest .
+
+      - name: Stop old container
+        run: |
+          docker stop website || true
+          docker rm website || true
+
+      - name: Run new container
+        run: |
+          docker run -d \
+            --name website \
+            --restart unless-stopped \
+            -p 3000:3000 \
+            website:latest
+
+      - name: Clean old images
+        run: docker image prune -af --filter "until=24h"
