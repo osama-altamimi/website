@@ -16,7 +16,8 @@ export function useCopy(duration = 2000) {
       }, duration)
 
       return true
-    } catch {
+    } catch (error) {
+      console.error("Clipboard copy failed:", error)
       return false
     }
   }

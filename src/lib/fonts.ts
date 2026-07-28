@@ -11,13 +11,9 @@ export const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-export const rustico = localFont({
-  variable: "--font-rustico",
-  src: [
-    {
-      path: "../fonts/Rustico-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
+export const lastik = localFont({
+  variable: "--font-serif",
+  src: "../fonts/lastik-regular.woff2",
+  weight: "400",
+  style: "normal",
 })

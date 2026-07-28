@@ -4,7 +4,7 @@ export const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.03,
       delayChildren: 0,
     },
   },

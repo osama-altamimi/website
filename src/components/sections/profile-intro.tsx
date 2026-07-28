@@ -36,7 +36,7 @@ export default function ProfileIntro() {
 
           <FadeInItem className="flex flex-col">
             <span className="text-muted-foreground sm:text-lg">Hi, I'm</span>
-            <h1 className="font-rustico text-3xl sm:text-4xl">
+            <h1 className="font-heading text-3xl sm:text-4xl">
               Osama AL-Tamimi
             </h1>
           </FadeInItem>

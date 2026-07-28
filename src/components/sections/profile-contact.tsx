@@ -15,7 +15,7 @@ const services = [
 export default function ProfileContact() {
   return (
     <section className="flex flex-col gap-3">
-      <FadeInItem as="h2" className="font-rustico text-2xl sm:text-3xl">
+      <FadeInItem as="h2" className="font-heading text-2xl sm:text-3xl">
         Contact
       </FadeInItem>
 
