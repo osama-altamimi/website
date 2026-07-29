@@ -1,14 +1,17 @@
-# 🌐 [ousama.dev](https://ousama.dev)
+<p align="center">
+  <img alt="header" src="https://shieldcn.dev/header/gradient.svg?title=Osama+AL-Tamimi&amp;subtitle=My+personal+portfolio+website&amp;width=1000&amp;mode=dark" />
+</p>
 
 <p align="center">
-  <a href="https://github.com/osama-altamimi/website/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/osama-altamimi/website/license.svg?variant=outline&mode=dark"><img alt="License" src="https://shieldcn.dev/github/osama-altamimi/website/license.svg?variant=outline&mode=light"></picture></a>
-  <a href="https://github.com/osama-altamimi/website"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/views/repo/osama-altamimi/website.svg?variant=outline&mode=dark"><img alt="Repository Views" src="https://shieldcn.dev/views/repo/osama-altamimi/website.svg?variant=outline&mode=light"></picture></a>
+  <a href="https://github.com/osama-altamimi/website"><img alt="license" src="https://shieldcn.dev/github/osama-altamimi/website/license.svg?split=true" /></a>
+  <a href="https://github.com/osama-altamimi/website"><img alt="repo views" src="https://shieldcn.dev/views/repo/osama-altamimi/website.svg?split=true" /></a>
 </p>
+
+## 📙 Overview
 
 My personal portfolio website, built with Next.js, TypeScript, and Tailwind CSS.
 
-🔗 **Live site:** [ousama.dev](https://ousama.dev)
-
+🌐 **Visit Website:** [ousama.dev](https://ousama.dev)
 
 ## ✨ Features
 
