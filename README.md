@@ -1,8 +1,14 @@
-# 🌐 ousama.dev
+# 🌐 [ousama.dev](https://ousama.dev)
+
+<p align="center">
+  <a href="https://github.com/osama-altamimi/website/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/osama-altamimi/website/license.svg?variant=outline&mode=dark"><img alt="License" src="https://shieldcn.dev/github/osama-altamimi/website/license.svg?variant=outline&mode=light"></picture></a>
+  <a href="https://github.com/osama-altamimi/website"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/views/repo/osama-altamimi/website.svg?variant=outline&mode=dark"><img alt="Repository Views" src="https://shieldcn.dev/views/repo/osama-altamimi/website.svg?variant=outline&mode=light"></picture></a>
+</p>
 
 My personal portfolio website, built with Next.js, TypeScript, and Tailwind CSS.
 
 🔗 **Live site:** [ousama.dev](https://ousama.dev)
+
 
 ## ✨ Features
 
