@@ -26,5 +26,4 @@ export const SITE_KEYWORDS = [
   "ousama.dev",
 ]
 
-export const TWITTER_USERNAME = "@ousama_altamimi"
 export const CONTACT_EMAIL = "me@ousama.dev"

@@ -55,7 +55,7 @@ export default function ProfileIntro() {
 
       <div className="flex gap-2">
         {socials
-          .filter((social) => ["github", "youtube", "x"].includes(social.id))
+          .filter((social) => ["github", "youtube"].includes(social.id))
           .map((social) => (
             <FadeInItem key={social.id}>
               <ButtonAnchor

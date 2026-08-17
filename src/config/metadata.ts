@@ -4,7 +4,6 @@ import {
   SITE_NAME,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
-  TWITTER_USERNAME,
 } from "@/config/site"
 
 export const metadata: Metadata = {
@@ -46,7 +45,6 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     images: ["/assets/og.png"],
-    creator: TWITTER_USERNAME,
   },
 
   robots: {

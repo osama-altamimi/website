@@ -37,16 +37,6 @@ export const socials: Social[] = [
     },
   },
   {
-    id: "x",
-    href: "https://x.com/ousama_altamimi",
-    label: "Twitter ( X )",
-    icon: X,
-    iconProps: {
-      variant: "mono",
-      className: "size-3",
-    },
-  },
-  {
     id: "discord",
     href: "discord://-/users/768757998402928680",
     label: "Discord",
